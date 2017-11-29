@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <!-- <link rel='stylesheet' href='/stylesheets/bootstrap.css' /> -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="/javascripts/bootstrap.js"></script> -->
+  </head>
+  <body>
+    title:<input type="text" id="title"><br/>
+    detail:<input type="text" id="detail"><br/>
+    redpacket:<input type="text" id="redpacket"><br/>
+    prime:<input type="text" id="prime"><br/>
+    sale:<input type="text" id="sale"><br/>
+    img:<input type="text" id="img"><br/>
+    <button id="save" onClick="save()">保存</button>
+  </body>
+  <script>
+	function save(){
+		$.ajax({
+			url:'/save',
+			type:'post',
+			dataType:'json',
+			data:{
+				title:$('#title').val(),
+				detail:$('#detail').val(),
+				redpacket:$('#redpacket').val(),
+				prime:$('#prime').val(),
+				sale:$('#sale').val(),
+				img:$('#img').val()
+			},
+			success:function(res){
+				if (res.code===1) {
+					alert(res.message)
+				}else{
+					alert(res.message)
+				}
+			}
+		})
+		$('#title').val('')
+		$('#detail').val('')
+		$('#redpacket').val('')
+		$('#prime').val('')
+		$('#sale').val('')
+		$('#img').val('')
+
+	}
+  </script>
+</html>

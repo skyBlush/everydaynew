@@ -1,0 +1,143 @@
+.shopcartPage {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+  .shopcartPage .place {
+    width: 100%;
+    height: 0.5rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 16px;
+    border-bottom: 10px solid #ccc; }
+    .shopcartPage .place span {
+      margin: 0 5px; }
+  .shopcartPage .postPrice {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    .shopcartPage .postPrice .check {
+      width: 10%;
+      text-align: left; }
+      .shopcartPage .postPrice .check span {
+        width: 0.22rem;
+        height: 0.22rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(../../image/checked.png) no-repeat center center;
+        background-size: 100%;
+        vertical-align: middle; }
+    .shopcartPage .postPrice .arrive {
+      width: 75%;
+      text-align: left; }
+      .shopcartPage .postPrice .arrive p {
+        font-size: 16px; }
+    .shopcartPage .postPrice .free {
+      width: 15%;
+      text-align: left; }
+      .shopcartPage .postPrice .free p {
+        font-size: 14px;
+        color: hotpink; }
+  .shopcartPage .products .item {
+    display: flex;
+    width: 100%;
+    border-box: box-sizing;
+    padding: 0 0.1rem;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px; }
+    .shopcartPage .products .item .check {
+      flex: 1;
+      text-align: left; }
+      .shopcartPage .products .item .check span {
+        width: 0.22rem;
+        height: 0.22rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(../../image/checked.png) no-repeat center center;
+        background-size: 100%; }
+    .shopcartPage .products .item .img {
+      flex: 2; }
+      .shopcartPage .products .item .img img {
+        width: 0.7rem;
+        height: 0.7rem; }
+    .shopcartPage .products .item .info {
+      flex: 3.5; }
+    .shopcartPage .products .item .num {
+      flex: 2;
+      text-align: center; }
+      .shopcartPage .products .item .num #reduce {
+        width: 0.22rem;
+        height: 0.22rem;
+        display: inline-block;
+        background: url(../../image/reduce-img-cart.png);
+        background-size: 100%; }
+      .shopcartPage .products .item .num .total {
+        padding: 0 5px; }
+      .shopcartPage .products .item .num #add {
+        width: 0.22rem;
+        height: 0.22rem;
+        display: inline-block;
+        background: url(../../image/add-img-cart.png);
+        background-size: 100%; }
+  .shopcartPage .totalPrice {
+    line-height: 0.5rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    .shopcartPage .totalPrice p span {
+      float: right; }
+  .shopcartPage .summary {
+    line-height: 0.5rem;
+    border-top: 1px solid #ccc;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 14px; }
+  .shopcartPage .vipCard .title {
+    height: 0.5rem; }
+    .shopcartPage .vipCard .title .img {
+      display: table-cell;
+      vertical-align: middle; }
+      .shopcartPage .vipCard .title .img img {
+        width: auto;
+        height: 0.18rem; }
+    .shopcartPage .vipCard .title .text {
+      padding-left: 0.1rem;
+      display: table-cell;
+      vertical-align: middle;
+      width: 86%;
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
+      .shopcartPage .vipCard .title .text span {
+        color: #FF4891; }
+  .shopcartPage .vipCard .saleMonth {
+    padding: 0 15px;
+    background-color: #fff;
+    position: relative;
+    line-height: 0.7rem;
+    height: 0.7rem; }
+    .shopcartPage .vipCard .saleMonth .img {
+      display: inline-block; }
+      .shopcartPage .vipCard .saleMonth .img img {
+        width: auto;
+        height: 0.5rem;
+        vertical-align: middle;
+        display: inline-block; }
+      .shopcartPage .vipCard .saleMonth .img span {
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
+        width: 0; }
+    .shopcartPage .vipCard .saleMonth .buy {
+      display: inline-block;
+      float: right;
+      height: 100%; }
+      .shopcartPage .vipCard .saleMonth .buy span {
+        width: 0.22rem;
+        height: 0.22rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(../../image/checked.png) no-repeat center center;
+        background-size: 100%; }

@@ -1,0 +1,49 @@
+.loginPage{
+	height:100%;
+	width:100%;
+	background:#fff;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:13;
+	h1{
+		height:0.4rem;
+		text-align:center;
+		line-height:0.4rem;
+		font-size:20px;
+		color:#333;
+		padding:0 0.1rem;
+		box-shadow: 0 0 5px #eee;
+		i{
+			float:left;
+			font-size:20px;
+		}
+	}
+	.conetent{
+		padding:0.4rem 0.2rem 0;
+		width:100%;
+		#loginId,#psw{
+			width:100%;
+			display:block;
+			border:none;
+			border-bottom:1px solid #eee;
+			line-height:0.5rem;
+			font-size:14px;
+		}
+		#login{
+			width:100%;
+			margin-top: 0.2rem;
+			line-height:0.5rem;
+			text-align:center;
+			border:none;
+			border-radius:5px;
+			font-size:18px;
+			background:hotpink;
+			color:#fff;
+		}	
+		p{
+			line-height:0.4rem;
+			text-align:center;
+		}
+	}
+}

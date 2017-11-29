@@ -1,0 +1,188 @@
+.shopcartPage{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	.place{
+		width:100%;
+		height:0.5rem;
+		text-align:center;
+		line-height:0.4rem;
+		font-size:16px;
+		border-bottom:10px solid #ccc;
+		span{
+			margin: 0 5px;
+		}
+	}
+	.postPrice{
+		height:0.4rem;
+		line-height:0.4rem;
+		display:flex;
+		flex-flow:row nowrap;
+		padding:0 0.1rem;
+		box-sizing:border-box;
+		.check{
+			width:10%;
+			text-align:left;
+			span{
+				width:0.22rem;
+				height:0.22rem;
+				display:inline-block;
+				border-radius:50%;
+				background:url(../../image/checked.png)no-repeat center center;
+				background-size:100%;
+				vertical-align:middle;
+			}
+		}
+		.arrive{
+			width:75%;
+			text-align:left;
+			p{
+				font-size:16px;
+			}
+		}
+		.free{
+			width:15%;
+			text-align:left;
+			p{
+				font-size:14px;
+				color:hotpink;
+			}
+		}
+	}
+	.products{
+		.item{
+			display:flex;
+			width:100%;
+			border-box:box-sizing;
+			padding:0 0.1rem;
+			flex-flow: row nowrap;
+			align-items:center;
+			border-top:1px solid #ccc;
+			padding-top: 10px;
+			.check{
+				flex:1;
+				text-align:left;
+				span{
+					width:0.22rem;
+					height:0.22rem;
+					display:inline-block;
+					border-radius:50%;
+					background:url(../../image/checked.png)no-repeat center center;
+					background-size:100%;
+				}
+			}
+			.img{
+				flex:2;
+				img{
+					width:0.7rem;
+					height:0.7rem;
+				}
+			}
+			.info{
+				flex:3.5;
+				.title{}
+				.redpacket{}
+				.vip{}
+				.price{}
+			}
+			.num{
+				flex:2;
+				text-align:center;
+				#reduce{
+					width:0.22rem;
+					height:0.22rem;
+					display:inline-block;
+					background:url(../../image/reduce-img-cart.png);
+					background-size:100%;
+				}
+				.total{
+					padding:0 5px;
+				}
+				#add{
+					width:0.22rem;
+					height:0.22rem;
+					display:inline-block;
+					background:url(../../image/add-img-cart.png);
+					background-size:100%;
+				}
+			}
+		}
+	}
+	.totalPrice{
+		line-height:0.5rem;
+		padding:0 0.1rem;
+		box-sizing:border-box;
+		p{
+			span{
+				float:right;
+			}
+		}
+	}
+	.summary{
+		line-height:0.5rem;
+		border-top:1px solid #ccc;
+		padding:0 0.1rem;
+		box-sizing:border-box;
+		text-align:right;
+		font-size:14px;
+	}
+	.vipCard{
+		.title{
+			height:0.5rem;
+			.img{
+				display:table-cell;
+				vertical-align:middle;
+				img{
+					width:auto;
+					height:0.18rem;
+				}
+			}
+			.text{
+					padding-left:0.1rem;
+			    display: table-cell;
+			    vertical-align: middle;
+			    width: 86%;
+			    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+			    span{
+			    	color:#FF4891;
+			    }
+			}
+		}
+		.saleMonth{
+			padding: 0 15px;
+	    background-color: #fff;
+	    position: relative;
+	    line-height: 0.7rem;
+	    height:0.7rem;
+			.img{
+				display:inline-block;
+		    img{
+		    	width:auto;
+		    	height:0.5rem;
+		    	vertical-align:middle;
+		    	display:inline-block;
+		    }
+		    span{
+		    	vertical-align:middle;
+		    	display:inline-block;
+		    	height:100%;
+		    	width:0;
+		    }
+			}
+			.buy{
+				display:inline-block;
+				float:right;
+				height:100%;
+				
+				span{
+					width:0.22rem;
+					height:0.22rem;
+					display:inline-block;
+					border-radius:50%;
+					background:url(../../image/checked.png)no-repeat center center;
+					background-size:100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.userpage .headd {
+  height: 1.1rem;
+  box-sizing: border-box;
+  padding-top: 0.17rem;
+  width: 100%;
+  background: url(../../image/my-bg.png) no-repeat;
+  background-size: 100% 100%; }
+  .userpage .headd .ulog {
+    width: 0.83rem;
+    color: hotpink;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 0.36rem auto 0 auto;
+    height: 0.38rem;
+    line-height: 0.36rem;
+    box-sizing: border-box;
+    padding: 0 0.12rem;
+    display: block;
+    border: 1px solid hotpink; }
+
+.userpage ul {
+  height: 0.6rem;
+  padding: 0.12rem 0;
+  box-sizing: content-box;
+  display: flex; }
+  .userpage ul li {
+    flex: 1;
+    text-align: center;
+    box-sizing: content-box;
+    padding: 0.1rem 0;
+    display: flex;
+    flex-direction: column; }
+    .userpage ul li span {
+      flex: 1; }
+    .userpage ul li p {
+      flex: 1;
+      line-height: 0.21rem; }
+
+.userpage .vip {
+  padding: 0.15rem  0.1rem 0 0.15rem;
+  box-sizing: content-box; }
+  .userpage .vip .vipone {
+    height: 0.3rem; }
+    .userpage .vip .vipone p {
+      display: inline-block;
+      line-height: 30px;
+      font-size: 20px;
+      color: #474245; }
+    .userpage .vip .vipone span {
+      line-height: 30px;
+      color: #969696;
+      float: right; }
+  .userpage .vip .tobe {
+    color: #969696; }
+    .userpage .vip .tobe span {
+      color: #ff4891; }
+
+.userpage .scrolly {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  flex-flow: row nowrap;
+  white-space: nowrap;
+  margin-top: 0.2rem; }
+  .userpage .scrolly .d {
+    text-align: center;
+    height: 0.7rem; }
+    .userpage .scrolly .d img {
+      width: 0.28rem;
+      height: 0.28rem;
+      margin: 0 auto 0.07rem auto; }
+    .userpage .scrolly .d span {
+      width: 100%;
+      padding: 0 0.152rem;
+      display: inline-block;
+      color: #474245; }
+
+.userpage .invite img {
+  height: 0.76rem; }
+
+.userpage .menu {
+  margin-bottom: 1.20rem;
+  padding-top: 0.25rem; }
+  .userpage .menu div {
+    width: 90%;
+    height: 0.61rem;
+    border-top: 1px solid #f0f0f0;
+    margin-left: 0.16rem;
+    color: #262626;
+    font-size: 16px;
+    line-height: 0.61rem; }
+    .userpage .menu div span {
+      float: right; }
+  .userpage .menu .settings {
+    margin-bottom: 0.35rem; }
