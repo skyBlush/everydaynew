@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^2.13.10",
     "axios": "^0.17.1",
     "express-session": "^1.15.6",
     "node-sass-chokidar": "0.0.3",
@@ -43,11 +44,35 @@
       },
       "ws": true
     },
+    "/search": {
+      "target": "https://as-vip.missfresh.cn",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/search": "/search"
+      },
+      "ws": true
+    },
     "/users": {
       "target": "http://localhost:8080",
       "changeOrigin": true,
       "pathRewrite": {
         "^/users": "/users"
+      },
+      "ws": true
+    },
+    "/save": {
+      "target": "http://localhost:8080",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/save": "/save"
+      },
+      "ws": true
+    },
+    "/web20": {
+      "target": "https://as-vip.missfresh.cn",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/web20": "/web20"
       },
       "ws": true
     }

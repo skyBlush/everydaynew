@@ -1,50 +1,94 @@
-.today {
-  height: 0.64rem; }
-  .today img {
-    width: 100%;
-    height: 100%; }
-
-.product {
-  height: 1.2rem;
-  padding: 0.22rem 0;
-  display: flex;
-  box-sizing: content-box;
-  border-bottom: 1px solid #f5f5f5;
-  position: relative; }
-  .product .pleft {
-    flex: 6;
-    height: 100%; }
-    .product .pleft img {
+.fruitpage {
+  margin-bottom: 0.8rem !important; }
+  .fruitpage .today {
+    height: 0.64rem; }
+    .fruitpage .today img {
+      width: 100%;
+      height: 100%; }
+  .fruitpage .product {
+    height: 1.2rem;
+    padding: 0.22rem 0;
+    display: flex;
+    box-sizing: content-box;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative; }
+    .fruitpage .product a {
+      display: flex;
+      width: 100%;
+      height: 100%; }
+    .fruitpage .product .pleft {
+      flex: 6;
+      height: 100%; }
+      .fruitpage .product .pleft img {
+        height: 100%;
+        margin: 0 0.175rem; }
+    .fruitpage .product .pright {
+      flex: 11;
+      height: 100%; }
+      .fruitpage .product .pright .pone {
+        padding-top: 0.11rem;
+        font-size: 16px;
+        color: #646063; }
+      .fruitpage .product .pright .ptwo {
+        font-size: 14px;
+        color: #9b9b9b; }
+      .fruitpage .product .pright .pthree span {
+        border: 1px solid #d2d2d2;
+        color: #dcdcdc;
+        border-radius: 5px; }
+      .fruitpage .product .pright .pfour {
+        color: #ff4891;
+        font-size: 12px; }
+        .fruitpage .product .pright .pfour span {
+          font-size: 16px; }
+      .fruitpage .product .pright .pfive {
+        color: #f8bc00;
+        font-size: 12px;
+        line-height: 22px; }
+        .fruitpage .product .pright .pfive span {
+          font-size: 16px; }
+  .fruitpage .cart {
+    width: 0.49rem;
+    height: 0.49rem;
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.1rem; }
+  .fruitpage .num {
+    position: absolute;
+    width: 1rem;
+    bottom: 0.25rem;
+    right: 0.05rem;
+    height: 0.25rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .fruitpage .num .reduce {
+      display: inline-block;
+      width: 24%;
       height: 100%;
-      margin: 0 0.175rem; }
-  .product .pright {
-    flex: 11;
-    height: 100%; }
-    .product .pright .pone {
-      padding-top: 0.11rem;
-      font-size: 16px;
-      color: #646063; }
-    .product .pright .ptwo {
-      font-size: 14px;
-      color: #9b9b9b; }
-    .product .pright .pthree span {
-      border: 1px solid #d2d2d2;
-      color: #dcdcdc;
-      border-radius: 5px; }
-    .product .pright .pfour {
-      color: #ff4891;
-      font-size: 12px; }
-      .product .pright .pfour span {
-        font-size: 16px; }
-    .product .pright .pfive {
-      color: #f8bc00;
-      font-size: 12px;
-      line-height: 22px; }
-      .product .pright .pfive span {
-        font-size: 16px; }
-    .product .pright .car {
-      width: 0.49rem;
-      height: 0.49rem;
-      position: absolute;
-      bottom: 0.1rem;
-      right: 0.1rem; }
+      font-size: 52px;
+      color: hotpink;
+      line-height: 18%;
+      border: 2px solid hotpink;
+      border-radius: 50%;
+      text-align: center; }
+    .fruitpage .num .count {
+      width: 40%;
+      height: 100%;
+      display: inline-block;
+      text-align: center; }
+    .fruitpage .num .add {
+      width: 24%;
+      height: 100%;
+      display: inline-block;
+      color: #fff;
+      background: hotpink;
+      font-size: 30px;
+      line-height: 40%;
+      border: 2px solid hotpink;
+      border-radius: 50%;
+      text-align: center; }
+
+.hidden {
+  display: none; }

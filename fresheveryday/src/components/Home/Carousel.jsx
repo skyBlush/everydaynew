@@ -18,7 +18,7 @@ export default class Carousely extends Component{
 				{this.state.banner.map((item,index)=>{
 					return(
 						<div key={item.url}>
-							<h3><img src={item.url}/></h3>
+							<h3><img src={item.url} alt=""/></h3>
 						</div>
 					)
 				})}

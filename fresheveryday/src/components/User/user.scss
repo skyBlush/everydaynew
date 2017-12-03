@@ -4,20 +4,21 @@
 		box-sizing:border-box;
 		padding-top:0.17rem;
 		width:100%;
+		text-align:center;
 		background:url(../../image/my-bg.png) no-repeat;
 		background-size: 100% 100%;
-		.ulog{
+		.ulog,.ulogOut{
 			width:0.83rem;
 			color:hotpink;
 			text-align:center;
 			font-size:14px;
 			border-radius:5px;
-			margin:0.36rem auto 0 auto;
+			margin:0.36rem  0.1rem;
 			height:0.38rem;
 			line-height:0.36rem;
 			box-sizing:border-box;
 			padding:0 0.12rem;
-			display:block;
+			display:inline-block;
 			border:1px solid hotpink;
 		}
 	}

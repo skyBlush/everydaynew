@@ -43,29 +43,30 @@
   .shopcartPage .products .item {
     display: flex;
     width: 100%;
-    border-box: box-sizing;
+    box-sizing: border-box;
     padding: 0 0.1rem;
     flex-flow: row nowrap;
     align-items: center;
     border-top: 1px solid #ccc;
-    padding-top: 10px; }
+    padding: 10px;
+    position: relative; }
     .shopcartPage .products .item .check {
-      flex: 1;
+      flex: 0.5;
       text-align: left; }
       .shopcartPage .products .item .check span {
         width: 0.22rem;
         height: 0.22rem;
         display: inline-block;
         border-radius: 50%;
-        background: url(../../image/checked.png) no-repeat center center;
+        border: 1px solid #ccc;
         background-size: 100%; }
     .shopcartPage .products .item .img {
-      flex: 2; }
+      flex: 1.5; }
       .shopcartPage .products .item .img img {
         width: 0.7rem;
         height: 0.7rem; }
     .shopcartPage .products .item .info {
-      flex: 3.5; }
+      flex: 4; }
     .shopcartPage .products .item .num {
       flex: 2;
       text-align: center; }
@@ -139,5 +140,8 @@
         height: 0.22rem;
         display: inline-block;
         border-radius: 50%;
-        background: url(../../image/checked.png) no-repeat center center;
+        border: 1px solid #ccc;
         background-size: 100%; }
+
+.checked {
+  background: url(../../image/checked.png) no-repeat center center; }

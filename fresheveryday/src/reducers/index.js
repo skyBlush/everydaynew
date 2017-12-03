@@ -8,7 +8,7 @@ const reducers = combineReducers({
 	Fruitpro:fruitproreducer,
 	addBannerPic: addBannerPicReducer,
 	searchFlag : searchReducer,
-	loginFlag: loginReducer,
+	username: loginReducer,
 	registFlag: registReducer
 })
 

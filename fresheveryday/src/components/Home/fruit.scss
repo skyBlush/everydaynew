@@ -1,67 +1,118 @@
-.today{
-	height:0.64rem;
-	img{
-		width:100%;
-		height:100%;
-	}
-}
-.product{
-	height:1.2rem;
-	padding:0.22rem 0;
-	display:flex;
-	box-sizing:content-box;
-	border-bottom: 1px solid #f5f5f5;
-	position:relative;
-	.pleft{
-		flex:6;
-		height:100%;
+.fruitpage{
+	margin-bottom:0.8rem !important;
+	.today{
+		height:0.64rem;
 		img{
+			width:100%;
 			height:100%;
-			margin: 0 0.175rem
 		}
 	}
-	.pright{
-		flex:11;
-		height:100%;
-		
-		.pone{
-			padding-top:0.11rem;
-			font-size:16px;
-			color:#646063;
+	.product{
+		height:1.2rem;
+		padding:0.22rem 0;
+		display:flex;
+		box-sizing:content-box;
+		border-bottom: 1px solid #f5f5f5;
+		position:relative;
+		a{
+			display:flex;
+			width:100%;
+			height:100%;
+			
 		}
-		.ptwo{
-			font-size:14px;
-			color:#9b9b9b;
-		}
-		.pthree{
-			span{
-				border:1px solid #d2d2d2;
-				color:#dcdcdc;
-				border-radius:5px;
+		.pleft{
+			flex:6;
+			height:100%;
+			img{
+				height:100%;
+				margin: 0 0.175rem
 			}
 		}
-		.pfour{
-			color: rgb(255, 72, 145);
-			font-size:12px;
-			span{
+		.pright{
+			flex:11;
+			height:100%;
+			.pone{
+				padding-top:0.11rem;
 				font-size:16px;
+				color:#646063;
 			}
-		}
-		.pfive{
-			color: rgb(248, 188, 0);
-			font-size:12px;
-			line-height:22px;
-			span{
-				font-size:16px;
+			.ptwo{
+				font-size:14px;
+				color:#9b9b9b;
 			}
+			.pthree{
+				span{
+					border:1px solid #d2d2d2;
+					color:#dcdcdc;
+					border-radius:5px;
+				}
+			}
+			.pfour{
+				color: rgb(255, 72, 145);
+				font-size:12px;
+				span{
+					font-size:16px;
+				}
+			}
+			.pfive{
+				color: rgb(248, 188, 0);
+				font-size:12px;
+				line-height:22px;
+				span{
+					font-size:16px;
+				}
+			}
+			
 		}
-		.car{
-			width:0.49rem;
-			height:0.49rem;
-			position:absolute;
-			bottom:0.1rem;
-			right:0.1rem;
+	}
+	.cart{
+		width:0.49rem;
+		height:0.49rem;
+		position:absolute;
+		bottom:0.1rem;
+		right:0.1rem;
+	}
+	.num{
+		position: absolute;
+	    width: 1rem;
+	    bottom: 0.25rem;
+	    right: 0.05rem;
+	    height: 0.25rem;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-pack: distribute;
+	    justify-content: space-around;
+		.reduce{
+			display: inline-block;
+		    width: 24%;
+		    height: 100%;
+		    font-size: 52px;
+		    color: hotpink;
+		    line-height: 18%;
+		    border: 2px solid hotpink;
+		    border-radius: 50%;
+		    text-align: center;
+		}
+		.count{
+			width:40%;
+			height:100%;
+			display:inline-block;
+			text-align:center;
+		}
+		.add{
+			width:24%;
+			height:100%;
+			display:inline-block;
+		    color: #fff;
+		    background:hotpink;
+		    font-size: 30px;
+			line-height: 40%;
+		    border: 2px solid hotpink;
+		    border-radius: 50%;
+		    text-align: center;
 		}
 	}
 }
-
+.hidden{
+	display:none;
+}

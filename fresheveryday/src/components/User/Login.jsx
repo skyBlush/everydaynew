@@ -1,25 +1,38 @@
 import React,{Component} from 'react'
 import axios from 'axios';
 import './login.css'
-import {connect} from 'react-redux';
 import Regist from './Regist'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class LoginUI extends Component{
+class Login extends Component{
 	constructor(){
 		super();
+		this.state={
+			isappear:false
+		}
+		console.log(this)
 		this.login = this.login.bind(this);
+		this.show = this.show.bind(this);
+	}
+	show(data){
+		this.setState({
+			isappear:data
+		})
 	}
 	login(){
 		axios.post('/users/login',{
-			username:this.refs.loginId.value,
-			psw:this.refs.psw.value
-		})
+				username:document.querySelector('#loginId').value,
+				psw:document.querySelector('#psw').value
+			})
 			.then((res)=>{
 				console.log(res)
 				if( res.data.code === 1 ){
 					alert(res.data.message)
-					this.props.changeFlag();
-					// this.props.history.push('/users');
+					this.props.change(false);
+					console.log(res);
+					localStorage.setItem("username",res.data.username)
+					// this.props.send(res.data.username)
+					// this.props.history.push('/users');//页面跳转
 				}else{
 					alert(res.data.message);
 				}
@@ -30,48 +43,30 @@ class LoginUI extends Component{
 	}
 	render(){
 		return (
-				<div>
-					<div className="loginPage">
-						<h1><i class="iconfont" onClick={this.props.changeFlag}>&#xe60f;</i>验证手机</h1>
-						<div className="conetent">
-							<input ref="loginId" id="loginId" type="text" placeholder="请输入用户名/密码"/><br/>
-							<input ref="psw" id="psw" type="text" placeholder="输入密码"/>
-							<button onClick={this.login} id="login">登录</button>
-							<button onClick={this.props.showRegistPage} id="login">注册</button>
-							<p>为方便您及时查询订单信息，需要验证您的手机号来登录</p>
+			<ReactCSSTransitionGroup
+		          transitionName='fade' 
+		          transitionEnterTimeout={1000} 
+		          transitionLeaveTimeout={1000}>
+				{
+					this.props.isshow&&!localStorage.getItem('username')?
+					<div className="loginBox">
+						<div className="loginPage">
+							<h1><i className="iconfont" onClick={()=>{this.props.change(false)}}>&#xe60f;</i>验证手机</h1>
+							<div className="conetent">
+								<input ref="loginId" id="loginId" type="text" placeholder="请输入用户名/密码"/><br/>
+								<input ref="psw" id="psw" type="text" placeholder="输入密码"/>
+								<button onClick={this.login} id="login">登录</button>
+								<button onClick={()=>{this.show(true)}} id="login">注册</button>
+								<p>为方便您及时查询订单信息，需要验证您的手机号来登录</p>
+							</div>
 						</div>
+						<Regist isappear={this.state.isappear} change={this.show}></Regist> 
 					</div>
-					{
-						this.props.registFlag? <Regist></Regist> : ''
-					}
-				</div>
+					:null
+				}		
+			</ReactCSSTransitionGroup>
 			)
 	}
 }
 
-const mapStateToProps = (state)=>{
-	return {
-		flag: state.loginFlag,
-		registFlag: state.registFlag
-	}
-}
-
-const mapDispatchToProps = (dispatch)=>{
-	return {
-		changeFlag: function(){
-			dispatch({
-				type:'changeUserFlag',
-				payload: false
-			})
-		},
-		showRegistPage: function(){
-			console.log(1)
-			dispatch({
-				type:'changeRegistFlag',
-				payload: true
-			})
-		}
-	}
-}
-const Login = connect(mapStateToProps,mapDispatchToProps)(LoginUI)
 export default Login;

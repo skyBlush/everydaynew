@@ -6,12 +6,12 @@ import Shopcart from './components/Shopcart/Shopcart';
 import FreshNews from './components/FreshNews/FreshNews';
 import Home from './components/Home/Home';
 import User from './components/User/User';
+import Detail from './components/Home/Detail';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom'
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
               <Route path='/freshNews' component={FreshNews} />
               <Route path='/shopcart' component={Shopcart} />
               <Route path='/user' component={User} />
+              <Route path='/detail' component={Detail} />              
             </Switch>
       		  <Footer></Footer>
           </div>

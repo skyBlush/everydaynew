@@ -1,8 +1,9 @@
-const mogoose = require('mongoose');
+const mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
 var Cart = new Schema({
+	productid    : String,
 	productName  : String,
 	productPrice : Number,
 	salePrice    : Number,
@@ -11,7 +12,8 @@ var Cart = new Schema({
 	productNum   : Number,
 	productPic   : String,
 	productInfo  : String,
-	flag         : 1
+	flag         : Number,
+	date 	     : { type: Date, default: Date.now }
 
 })
 

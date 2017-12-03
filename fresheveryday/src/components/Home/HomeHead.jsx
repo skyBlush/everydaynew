@@ -2,14 +2,19 @@ import React,{Component} from 'react';
 import './homehead.css'
 import {NavLink} from 'react-router-dom';
 import Search from './Search';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import {connect} from 'react-redux'
-// import {HotSale,HotPot,Fruit,Vegetables,Mike,Egg,Snacks,Drink,OceanFood,CookedFood,
-				// FastFood,Oil,EasyFood,Daily} from './'
 
-class HomeHeadUI extends Component {
+class HomeHead extends Component {
 	constructor(){
 		super();
+		this.state={
+			isshow:false
+		}
+		this.slide = this.slide.bind(this)
+	}
+	slide(data){
+		this.setState({
+			isshow: data
+		})
 	}
 	render(){
 		return (
@@ -19,92 +24,85 @@ class HomeHeadUI extends Component {
 						<div className="chosePlace">
 							<img src="https://j-image.missfresh.cn/img_20161026155951214.png" alt=""/>
 							<span>北京市</span>
-							<i class="iconfont">&#xe632;</i>
+							<i className="iconfont">&#xe632;</i>
 						</div>
 						<div className="searchButton">
-							<i class="iconfont">&#xe728;</i>
-							<span onClick = {this.props.slideIn}>搜索</span>
+							<i className="iconfont">&#xe728;</i>
+							<span onClick = {()=>{this.slide(true)}}>搜索</span>
 						</div>
 					</div>
 					<div className="nav">
 						<div className="navList">
-							<NavLink activeClassName="active" to="/Home/HotSale">
+							<NavLink activeClassName="active" to={'/home/hotsale'}>
 								<span>热卖</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/HotPot">
+							<NavLink activeClassName="active" to={'/home/hotpot'}>
 								<span>火锅</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Fruit">
-								<span>水果</span>
+							<NavLink activeClassName="active" to={'/home/fruit'}>
+								<span >水果</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Vegetables">
+							<NavLink activeClassName="active" to={'/home/vegetables'}>
 								<span>蔬菜</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="Home/Mike">
+							<NavLink activeClassName="active" to={'/home/milk'}>
 								<span>乳品</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="Home/Egg">
+							<NavLink activeClassName="active" to={'/home/egg'}>
 								<span>肉蛋</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Snacks">
+							<NavLink activeClassName="active" to={'/home/snacks'}>
 								<span>零食</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Drink">
+							<NavLink activeClassName="active" to={'/home/drink'}>
 								<span>酒饮</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/OceanFood">
+							<NavLink activeClassName="active" to={'/home/oceanfood'}>
 								<span>水产</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/CookedFood">
+							<NavLink activeClassName="active" to={'/home/cookedfood'}>
 								<span>熟食</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/FastFood">
+							<NavLink activeClassName="active" to={'/home/fastfood'}>
 								<span>速食</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Oil">
+							<NavLink activeClassName="active" to={'/home/oil'}>
 								<span>粮油</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/EasyFood">
+							<NavLink activeClassName="active" to={'/home/easyfood'}>
 								<span>轻食</span>
 							</NavLink>
-							<NavLink activeClassName="active" to="/Home/Daily">
+							<NavLink activeClassName="active" to={'/home/daily'}>
 								<span>日百</span>
 							</NavLink>
 						</div>
 						<div className="navButton">
-							<i class="iconfont">&#xe507;</i>
+							<i className="iconfont">&#xe507;</i>
 						</div>						
 					</div>
-				</header>
-				<ReactCSSTransitionGroup
-		          transitionName='fade' 
-		          transitionEnterTimeout={1000} 
-		          transitionLeaveTimeout={1000}>
-					{
-						this.props.flag ?<Search></Search>: ''
-					}
-				</ReactCSSTransitionGroup>
+				</header>		
+				<Search isshow={this.state.isshow} change={this.slide}></Search>		
 			</div>
 		)
 	}
 }
-const mapStateToProps = (state)=>{
-	return {
-		flag: state.searchFlag
-	}
-}
+// const mapStateToProps = (state)=>{
+// 	return {
+// 		flag: state.searchFlag
+// 	}
+// }
 
-const mapDispatchToProps = (dispatch)=>{
-	return{
-		slideIn: ()=>{
-			dispatch({
-				type : 'changeFlag',
-				payload : true
-			})
-		}
+// const mapDispatchToProps = (dispatch)=>{
+// 	return{
+// 		slideIn: ()=>{
+// 			dispatch({
+// 				type : 'changeFlag',
+// 				payload : true
+// 			})
+// 		}
 				
-	}
-}
+// 	}
+// }
 
-const HomeHead = connect(mapStateToProps,mapDispatchToProps)(HomeHeadUI)
+// const HomeHead = connect(mapStateToProps,mapDispatchToProps)(HomeHeadUI)
 export default HomeHead;
